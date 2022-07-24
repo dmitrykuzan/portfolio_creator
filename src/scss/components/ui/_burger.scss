@@ -1,9 +1,9 @@
-$burgerMQ: em(992);
+$burgerMQ: em(767);
 
 .burger {
   $width: 2.5rem;
   $height: 2rem;
-  $bgColor: hsl(0deg 0% 0%);
+  $bgColor: var(--clr-default-900);
   $burgerLineHeight: 0.4rem;
 
   display: none;

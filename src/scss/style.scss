@@ -19,29 +19,40 @@
 // </ОБНУЛЕНИЕ>===============================================================
 
 // <ПЕРЕМЕННЫЕ>===============================================================
-$containerWidth: 120rem;
+$containerWidth: 121.5rem;
 
 :root {
   // base
-  --font-family: "", sans-serif;
+  --font-family: "Roboto", sans-serif;
   --font-weight: 400;
-  --content-width: 117rem;
+  --content-width: 118.5rem;
   --container-offset: 1.5rem;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
   --transition: 0.3s;
 
   // colors
   --clr-default-100: #fff;
-  --clr-default-400: #181818;
+  --clr-default-200: rgba(255, 255, 255, 0.7);
+  --clr-default-300: #8A95AD;
+  --clr-default-400: #666666;
+  --clr-default-500: #5C5C5C;
+  --clr-default-800: rgba(0, 0, 0, 0.6);
   --clr-default-900: #000;
+
+  --clr-primary-400: #FF8A56;
+  --clr-primary-500: #FF5E69;
+  --clr-primary-600: #B16CEA;
+  --clr-primary-700: #3C46FF;
+  --clr-primary-800: #FFA84B;
 }
 
 // </ПЕРЕМЕННЫЕ>==============================================================
 
 // <ОБОЛОЧКИ>================================================================
 body {
+  font-weight: 400;
   font-size: 1.6rem;
-  color: var(--clr-default-400);
+  color: var(--clr-default-900);
 
   &.lock {
     position: fixed;

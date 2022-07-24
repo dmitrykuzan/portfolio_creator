@@ -1,6 +1,10 @@
 .header {
+  display: flex;
+  align-items: center;
+  min-height: 8rem;
   &__wrapper {
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
 }
