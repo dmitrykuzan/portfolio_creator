@@ -1,4 +1,6 @@
 .service {
+  position: relative;
+
   &__title {
     margin-bottom: 2rem;
     text-align: center;
@@ -131,5 +133,33 @@
         transform: translateY(-50%);
       }
     }
+  }
+
+  &__line-desktop {
+    position: absolute;
+    left: 0;
+    top: 34rem;
+    z-index: -1;
+
+    .path {
+      stroke-dasharray: 2200;
+      stroke-dashoffset: 4400;
+      animation-name: stroke-desctop;
+      animation-duration: 2s;
+      animation-play-state: paused;
+    }
+
+    .circle {
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+}
+}
+@keyframes stroke-desktop {
+  0% {
+    stroke-dashoffset: 2200;
+  }
+  100% {
+    stroke-dashoffset: 4400;
   }
 }

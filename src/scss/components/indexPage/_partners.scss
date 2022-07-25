@@ -1,4 +1,5 @@
-.trust {
+.partners {
+  padding-top: 8rem;
   &__title {
     margin-bottom: 4.5rem;
     font-size: 1.8rem;
@@ -20,7 +21,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    animation: trust__list 8s linear infinite running;
+    animation: partners__list 8s linear infinite running;
 
     @media (max-width: em(767)) {
       display: grid;
@@ -28,7 +29,7 @@
       grid-template-columns: repeat(2, 1fr);
       animation: none;
     }
-   
+
     @media (max-width: em(575)) {
       display: block;
       grid-gap: initial;
@@ -50,17 +51,18 @@
   }
 }
 
-.trust__list {
+.partners__list {
   &:hover {
     animation-play-state: paused;
   }
 }
 
-@keyframes trust__list {
+
+@keyframes partners__list {
   0% {
-    transform: translateX(0%);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(calc(-25rem * 4));
   }
 }

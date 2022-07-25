@@ -116,6 +116,7 @@ main {
 
 // Components - UI
 @import "./ui";
+@import "./components/common/modal-request";
 
 // Components - UI
 
@@ -134,8 +135,9 @@ main {
 
 // Components - Pages
 @import "./components/indexPage/hero";
-@import "./components/indexPage/trust";
+@import "./components/indexPage/partners";
 @import "./components/indexPage/service";
+@import "./components/indexPage/projects";
 
 // Components - Pages
 

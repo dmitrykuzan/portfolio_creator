@@ -1,6 +1,8 @@
 $burgerMQ: em(767);
 
 .menu {
+  z-index: 1;
+
   &__list {
     display: flex;
     align-items: center;
@@ -22,7 +24,7 @@ $burgerMQ: em(767);
       bottom: -4px;
       width: 0;
       height: 2px;
-      background-color: var(--clr-default-900);
+      background-color: var(--clr-primary-400);
       transform: translate(-50%, 0);
       transition: width 0.3s;
     }
