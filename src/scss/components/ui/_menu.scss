@@ -13,6 +13,25 @@ $burgerMQ: em(767);
   }
 
   &__item {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background-color: var(--clr-default-900);
+      transform: translate(-50%, 0);
+      transition: width 0.3s;
+    }
+
+    &:hover::before {
+      width: 100%;
+      transition: width 0.3s;
+    }
+
     &:not(:last-child) {
       margin-right: 4rem;
 

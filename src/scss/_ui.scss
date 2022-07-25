@@ -8,3 +8,46 @@
   height: 1px;
   clip: rect(0 0 0 0);
 }
+
+.section {
+  padding-top: 16rem;
+
+  @media (max-width: em(992)) {
+    padding-top: 8rem;
+  }
+
+  @media (max-width: em(767)) {
+    padding-top: 5rem;
+  }
+}
+
+.main__button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  width: max-content;
+  min-width: 15rem;
+  min-height: 6rem;
+  max-width: 20rem;
+  font-size: 1.8rem;
+  text-align: center;
+  color: var(--clr-default-100);
+  background-color: var(--clr-default-900);
+}
+
+.title {
+  font-weight: 700;
+  font-size: fluid-font(2.2rem, 1.8rem);
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-weight: 700;
+  font-size: fluid-font(5.4rem, 3.2rem);
+  line-height: 110%;
+  letter-spacing: 0.1rem;
+}

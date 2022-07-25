@@ -110,6 +110,10 @@ main {
   max-width: var(--container-width);
 }
 
+//Libs
+@import "./libs/aos";
+//Libs
+
 // Components - UI
 @import "./ui";
 
@@ -130,6 +134,8 @@ main {
 
 // Components - Pages
 @import "./components/indexPage/hero";
+@import "./components/indexPage/trust";
+@import "./components/indexPage/service";
 
 // Components - Pages
 

@@ -1,0 +1,135 @@
+.service {
+  &__title {
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--clr-primary-500);
+  }
+
+  &__subtitle {
+    margin-right: auto;
+    margin-bottom: 11rem;
+    margin-left: auto;
+    max-width: 76rem;
+    text-align: center;
+
+    @media (max-width: em(992)) {
+      margin-bottom: 5rem;
+      max-width: initial;
+    }
+
+    @media (max-width: em(575)) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-gap:  3rem 9rem;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+
+    @media (max-width: em(1200)) {
+      grid-gap:  3rem 6rem;
+    }
+
+    @media (max-width: em(575)) {
+      display: block;
+      grid-gap: initial;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-top: 10rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 7rem;
+      height: 7rem;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      @media (max-width: em(575)) {
+        width: 5rem;
+        height: 5rem;
+      }
+    }
+
+    &--1 {
+      &::before {
+        background-image: url(../img/service/item1.svg);
+      }
+    }
+
+    &--2 {
+      &::before {
+        background-image: url(../img/service/item2.svg);
+      }
+    }
+
+    &--3 {
+      &::before {
+        background-image: url(../img/service/item3.svg);
+      }
+    }
+
+    @media (max-width: em(575)) {
+      padding-top: 6rem;
+
+      &:not(:last-child) {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+    font-size: fluid-font(2.4rem, 1.8rem);
+
+    @media (max-width: em(575)) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__item-description {
+    margin-bottom: 2rem;
+    max-width: 25rem;
+    line-height: 175%;
+    color: var(--clr-default-400);
+
+    @media (max-width: em(1200)) {
+      max-width: initial;
+    }
+
+    @media (max-width: em(575)) {
+      margin-bottom: 1rem;
+      line-height: 150%;
+    }
+  }
+
+  &__item-list {
+    li {
+      position: relative;
+      padding-left: 2rem;
+      font-weight: 700;
+
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 0.7rem;
+        height: 0.7rem;
+        background-color: var(--clr-default-900);
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
