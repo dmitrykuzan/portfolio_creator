@@ -53,6 +53,7 @@
   "dependencies": {
     "aos": "^3.0.0-beta.6",
     "focus-visible": "^5.2.0",
+    "just-validate": "^3.8.1",
     "particles.js": "^2.0.0"
   }
 }

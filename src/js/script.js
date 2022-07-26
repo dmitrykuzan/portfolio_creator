@@ -10,7 +10,7 @@ import { mobileCheck, burger, modals } from "./functions/";
 import AOS from "aos";
 
 // Components
-// import { formValidation } from "./components/";
+import { formValidation } from "./components/";
 import { particles } from "./components";
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -18,6 +18,7 @@ window.addEventListener("DOMContentLoaded", () => {
   burger();
   modals();
   particles();
+  formValidation();
   AOS.init({
     once: true,
   });
