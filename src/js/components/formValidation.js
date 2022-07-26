@@ -27,6 +27,19 @@ export const formValidation = () => {
           },
         ],
       },
+      // {
+      //   ruleSelector: ".input__tell",
+      //   rules: [
+      //     {
+      //       rule: "tell",
+      //       errorMessage: "Phone is not valid",
+      //     },
+      //     {
+      //       rule: "required",
+      //       errorMessage: "Phone is required",
+      //     },
+      //   ],
+      // },
     ],
     null,
     null,

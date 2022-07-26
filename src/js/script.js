@@ -10,12 +10,14 @@ import { mobileCheck, burger, modals } from "./functions/";
 import AOS from "aos";
 
 // Components
-import { formValidation } from "./components/";
-import { particles } from "./components";
+import { formValidation, particles} from "./components/";
+import { projectsSlider } from "./functions/projectsSlider";
+
 
 window.addEventListener("DOMContentLoaded", () => {
   mobileCheck();
   burger();
+  projectsSlider();
   modals();
   particles();
   formValidation();
