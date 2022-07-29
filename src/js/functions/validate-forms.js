@@ -1,5 +1,5 @@
 import JustValidate from "just-validate";
-// import Inputmask from "inputmask";
+import Inputmask from "inputmask";
 
 export const validateForms = (
   selector,
@@ -23,23 +23,23 @@ export const validateForms = (
     return false;
   }
 
-  // if (telSelector) {
-  //   const inputMask = new Inputmask("+7 (999) 999-99-99");
-  //   inputMask.mask(telSelector);
+  if (telSelector) {
+    const inputMask = new Inputmask("+38 (999) 999-99-99");
+    inputMask.mask(telSelector);
 
-  //   for (let item of rules) {
-  //     if (item.tel) {
-  //       item.rules.push({
-  //         rule: "function",
-  //         validator: function () {
-  //           const phone = telSelector.inputmask.unmaskedvalue();
-  //           return phone.length === 10;
-  //         },
-  //         errorMessage: item.telError,
-  //       });
-  //     }
-  //   }
-  // }
+    for (let item of rules) {
+      if (item.tel) {
+        item.rules.push({
+          rule: "function",
+          validator: function () {
+            const phone = telSelector.inputmask.unmaskedvalue();
+            return phone.length === 10;
+          },
+          errorMessage: item.telError,
+        });
+      }
+    }
+  }
 
   //================
   const formBtn = form?.querySelector("button");
@@ -102,3 +102,5 @@ export const validateForms = (
     console.log("fields", fields);
   });
 };
+
+
