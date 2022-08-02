@@ -125,5 +125,10 @@ $overlayBgColor: linear-gradient(0deg, rgba(0, 0, 0, 0.66), rgba(0, 0, 0, 0.66))
         height: 1.5rem;
       }
     }
+
+    .just-validate-error-label {
+      padding-top: 1rem;
+      padding-left: 1rem;
+    }
   }
 }

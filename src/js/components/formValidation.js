@@ -27,19 +27,21 @@ export const formValidation = () => {
           },
         ],
       },
-      // {
-      //   ruleSelector: ".input__tell",
-      //   rules: [
-      //     {
-      //       rule: "tel",
-      //       errorMessage: "Phone is not valid",
-      //     },
-      //     {
-      //       rule: "required",
-      //       errorMessage: "Phone is required",
-      //     },
-      //   ],
-      // },
+      {
+        ruleSelector: ".input__tell",
+        rules: [
+          {
+            rule: "tel",
+            value: 2,
+            rule: "minLength",
+            errorMessage: "Phone is not valid",
+          },
+          {
+            rule: "required",
+            errorMessage: "Phone is required",
+          },
+        ],
+      },
     ],
     null,
     null,
@@ -61,6 +63,12 @@ export const formValidation = () => {
         key: "Email is required",
         dict: {
           ru: "Введите почту",
+        },
+      },
+      {
+        key: "Phone is required",
+        dict: {
+          ru: "Введите номер телефона",
         },
       },
     ],
