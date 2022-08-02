@@ -130,5 +130,25 @@ $overlayBgColor: linear-gradient(0deg, rgba(0, 0, 0, 0.66), rgba(0, 0, 0, 0.66))
       padding-top: 1rem;
       padding-left: 1rem;
     }
+
+    .contact__form-status--error, .contact__form-status--success {
+      display: none;
+    }
+
+    .contact__form-status {
+      &--error, &--success {
+        display: none;
+        padding-top: 1rem;
+        text-align: center;
+      }
+
+      &--error {
+        color: red;
+      }
+
+      &--success {
+        color: green;
+      }
+    }
   }
 }

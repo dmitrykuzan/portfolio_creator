@@ -70,6 +70,7 @@ export const validateForms = (
     if (response.status !== 200) {
       const errorMessage = form.querySelector(".contact__form-status--error");
 
+      console.log(errorMessage)
       errorMessage.style.display = "block";
 
       setTimeout(() => {
@@ -84,6 +85,7 @@ export const validateForms = (
         ".contact__form-status--success"
       );
 
+      console.log(successMessage);
       successMessage.style.display = "block";
 
       setTimeout(() => {
