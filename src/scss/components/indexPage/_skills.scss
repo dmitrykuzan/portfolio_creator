@@ -1,0 +1,234 @@
+.skills {
+
+  &__wrapper {
+  }
+
+  &__list-category {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: em(992)) {
+      flex-direction: column;
+    }
+  }
+
+  &__category-item {
+    min-width: 56rem;
+
+    &:first-child {
+      @media (max-width: em(992)) {
+        margin-bottom: 3rem;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 5rem;
+
+      @media (max-width: em(992)) {
+        margin-right: initial;
+      }
+    }
+
+    @media (max-width: em(1200)) {
+      min-width: 45rem;
+    }
+
+    @media (max-width: em(992)) {
+      min-width: initial;
+    }
+  }
+
+  &__list {
+  }
+
+  &__list-title {
+    padding-bottom: 8rem;
+    font-size: fluid-font(3.6rem, 2.8rem);
+
+    @media (max-width: em(992)) {
+      padding-bottom: 4rem;
+    }
+
+    @media (max-width: em(575)) {
+      padding-bottom: 3rem;
+    }
+  }
+
+  &__item {
+    position: relative;
+    border-bottom: 0.1rem solid var(--clr-default-500);
+    padding-bottom: 4rem;
+
+    &:not(:last-child) {
+      margin-bottom: 3.5rem;
+
+      @media (max-width: em(575)) {
+        margin-bottom: 2.5rem;
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 1.3rem;
+      height: 1.3rem;
+      background-image: url(../img/ui/arrow.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      transform: rotate(-35deg);
+    }
+
+    &:last-child {
+      @media (max-width: em(992)) {
+        border-bottom: initial;
+      }
+    }
+
+    @media (max-width: em(767)) {
+      padding-bottom: 2rem;
+    }
+  }
+
+  &__item-wrap {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: em(575)) {
+      flex-direction: column;
+    }
+  }
+
+  &__item-text {
+    padding-right: 2rem;
+
+    &--1, &--2, &--3 {
+      position: relative;
+      padding-left: 7rem;
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 50%;
+          border-radius: 50%;
+          width: 5rem;
+          height: 5rem;
+          transform: translateY(-50%);
+
+          @media (max-width: em(575)) {
+            width: 3.5rem;
+            height: 3.5rem;
+          }
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          left: 2.5rem;
+          top: 50%;
+          background-size: cover;
+          background-repeat: no-repeat;
+          transform: translate(-50%, -50%);
+
+          @media (max-width: em(575)) {
+            left: 1.8rem;
+          }
+        }
+
+        @media (max-width: em(575)) {
+          padding-left: 5rem;
+        }
+      }
+
+      &--1 {
+        &::before {
+           background-color: var(--clr-skills-400);
+        }
+
+        &::after {
+          width: 1.9rem;
+          height: 2.1rem;
+          background-image: url(../img/skills/space.svg);
+
+          @media (max-width: em(575)) {
+            left: 1.7rem;
+            width: 1.7rem;
+            height: 2rem;
+          }
+        }
+      }
+
+      &--2 {
+        &::before {
+          background-color: var(--clr-skills-500);
+       }
+
+        &::after {
+          width: 1.8rem;
+          height: 2rem;
+          background-image: url(../img/skills/note.svg);
+        }
+      }
+
+      &--3 {
+        &::before {
+          background-color: var(--clr-skills-600);
+       }
+
+        &::after {
+          width: 2.3rem;
+          height: 1.7rem;
+          background-image: url(../img/skills/crown.svg);
+        }
+      }
+
+      @media (max-width: em(575)) {
+        margin-bottom: 1rem;
+      }
+  }
+
+  &__item-title {
+    padding-bottom: 1rem;
+    font-weight: 700;
+    font-size: fluid-font(2.4rem, 1.8rem);
+    line-height: 110%;
+
+    @media (max-width: em(575)) {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  &__item-info {
+    line-height: 130%;
+    color: var(--clr-default-800);
+  }
+
+  &__item-date {
+    position: relative;
+    margin-top: auto;
+    padding-left: 1.2rem;
+    line-height: 130%;
+    color: var(--clr-default-800);
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      border-radius: 50%;
+      width: 0.3rem;
+      height: 0.3rem;
+      background-color: var(--clr-default-800);
+      transform: translateY(-50%);
+    }
+
+    &--experience {
+      @media (max-width: em(575)) {
+        margin-left: 5rem;
+      }
+    }
+  }
+}
+

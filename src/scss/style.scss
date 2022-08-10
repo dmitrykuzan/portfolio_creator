@@ -44,6 +44,10 @@ $containerWidth: 121.5rem;
   --clr-primary-600: #B16CEA;
   --clr-primary-700: #3C46FF;
   --clr-primary-800: #FFA84B;
+
+  --clr-skills-400: #FFB4E9;
+  --clr-skills-500: #A5BEFF;
+  --clr-skills-600: #FFC960;
 }
 
 // </ПЕРЕМЕННЫЕ>==============================================================
@@ -141,6 +145,9 @@ main {
 @import "./components/indexPage/projects";
 @import "./components/indexPage/blog";
 @import "./components/indexPage/product";
+@import "./components/indexPage/skills";
+@import "./components/indexPage/testimonials";
+@import "./components/common/faq";
 
 // Components - Pages
 

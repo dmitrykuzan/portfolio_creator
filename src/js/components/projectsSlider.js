@@ -1,5 +1,5 @@
 export const projectsSlider = () => {
-  let projectsSlider = new Swiper(".swiper", {
+  let projectsSlider = new Swiper(".projects__slider", {
     spaceBetween: 15,
     slidesPerView: 1,
     navigation: {

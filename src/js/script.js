@@ -4,14 +4,15 @@
 import "./_vendor";
 
 // Functions
-import { mobileCheck, burger, modals } from "./functions/";
+import { mobileCheck, burger, modals, accordion } from "./functions/";
 
 //libs
 import AOS from "aos";
 
 // Components
 import { formValidation, particles} from "./components/";
-import { projectsSlider } from "./components/projectsSlider";
+import { projectsSlider} from "./components/projectsSlider";
+import { reviewSlider} from "./components/reviewSlider";
 
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -21,6 +22,8 @@ window.addEventListener("DOMContentLoaded", () => {
   modals();
   particles();
   formValidation();
+  reviewSlider();
+  accordion(".faq__list", "faq__item-title", ".faq__item", "active");
   AOS.init({
     once: true,
   });

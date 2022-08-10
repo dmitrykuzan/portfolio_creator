@@ -1,0 +1,141 @@
+.testimonials {
+
+  &__title {
+    color: var(--clr-primary-700);
+  }
+
+  &__subtitle {
+    padding-bottom: 8rem;
+  }
+
+  &__slider {
+    position: relative;
+  }
+
+  &__slider-wrapper {
+  }
+
+  &__slide {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: em(992)) {
+      flex-direction: column;
+    }
+  }
+
+  &__slide-image {
+    margin-right: 3rem;
+    max-width: 48.5rem;
+
+    @media (max-width: em(992)) {
+      margin-right: auto;
+      margin-bottom: 3rem;
+      margin-left: auto;
+    }
+  }
+
+  &__slide-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 58rem;
+
+    @media (max-width: em(1200)) {
+      max-width: 50rem;
+    }
+
+    @media (max-width: em(992)) {
+      max-width: initial;
+    }
+  }
+
+  &__slide-text {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-top: 8rem;
+    font-weight: 700;
+    font-size: fluid-font(3.6rem, 2.8rem);
+    line-height: 130%;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 4.5rem;
+      height: 4.5rem;
+      background-image: url(../img/testimonials/decor.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      @media (max-width: em(575)) {
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+
+    @media (max-width: em(992)) {
+      padding-top: 4rem;
+    }
+
+    @media (max-width: em(575)) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__name-wrap {
+  }
+
+  &__slide-name {
+    padding-bottom: 0.8rem;
+    font-weight: 700;
+    font-size: fluid-font(2rem, 1.8rem);
+  }
+
+  &__slide-prof {
+    font-size: fluid-font(1.8rem, 1.6rem);
+  }
+
+  &__nav {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  &__button-prev, &__button-next {
+    width: 5.5rem;
+    height: 5.5rem;
+    background-color: var(--clr-default-900);
+
+    @media (max-width: em(575)) {
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+  }
+
+  &__button-prev, &__button-next {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 1.3rem;
+      height: 2rem;
+      background-image: url(../img/ui/prev-white.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__button-next {
+    &::before {
+      transform: translate(-50%, -50%) rotate(-180deg);
+    }
+  }
+}
