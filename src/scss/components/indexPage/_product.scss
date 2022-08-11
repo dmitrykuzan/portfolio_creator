@@ -48,6 +48,10 @@
     line-height: 182%;
     color: var(--clr-default-400);
 
+    p:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+
     @media (max-width: em(1200)) {
       max-width: initial;
     }

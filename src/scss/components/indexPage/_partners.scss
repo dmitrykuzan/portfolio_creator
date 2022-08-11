@@ -1,5 +1,6 @@
 .partners {
   padding-top: 8rem;
+
   &__title {
     margin-bottom: 4.5rem;
     font-size: 1.8rem;
@@ -21,7 +22,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    animation: partners__list 8s linear infinite running;
+    // animation: partners__list 8s linear infinite running;
 
     @media (max-width: em(767)) {
       display: grid;
@@ -37,9 +38,22 @@
   }
 
   &__item {
-    margin-right: auto;
-    margin-left: auto;
+    // margin-right: auto;
+    // margin-left: auto;
     max-width: 14rem;
+
+    &:not(:last-child) {
+      margin-right: 10rem;
+    }
+
+    @media (max-width: em(767)) {
+      margin-right: auto;
+      margin-left: auto;
+
+      &:not(:last-child) {
+        margin-right: auto;
+      }
+    }
 
     @media (max-width: em(575)) {
       max-width: 20rem;
@@ -51,18 +65,18 @@
   }
 }
 
-.partners__list {
-  &:hover {
-    animation-play-state: paused;
-  }
-}
+// .partners__list {
+//   &:hover {
+//     animation-play-state: paused;
+//   }
+// }
 
 
-@keyframes partners__list {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-25rem * 4));
-  }
-}
+// @keyframes partners__list {
+//   0% {
+//     transform: translateX(0);
+//   }
+//   100% {
+//     transform: translateX(calc(-25rem * 4));
+//   }
+// }

@@ -1,5 +1,132 @@
 .footer {
+  padding-bottom: 2rem;
+  background-color: var(--clr-default-900);
+
   &__wrapper {
+   
+  }
+
+  &__title {
+    color: var(--clr-default-100);
+  }
+
+  &__subtitle {
+    margin-bottom: 9rem;
+    color: var(--clr-primary-700);
+
+    @media (max-width: em(992)) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__content {
     display: flex;
+    justify-content: space-between;
+    margin-bottom: 14rem;
+
+    @media (max-width: em(992)) {
+      flex-direction: column;
+      margin-bottom: 6rem;
+    }
+
+    @media (max-width: em(575)) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__info {
+    margin-right: 2rem;
+
+    @media (max-width: em(992)) {
+      margin-right: initial;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 1.5rem;
+  }
+
+  &__info-address {
+    margin-bottom: 1rem;
+    color: var(--clr-default-400);
+  }
+
+  &__info-mail {
+    position: relative;
+    padding-left: 3.5rem;
+
+    a {
+      font-size: 1.7rem;
+      color: var(--clr-default-500);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 3rem;
+      height: 2rem;
+      background-image: url(../img/ui/mail.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__nav {
+  }
+
+  &__nav-list {
+    display: grid;
+    grid-gap: 4rem 14rem;
+    grid-template-columns: repeat(3, 1fr);
+
+    @media (max-width: em(575)) {
+      grid-gap: 2rem 3rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: em(375)) {
+      display: block;
+      grid-gap: initial;
+    }
+  }
+
+  &__nav-item {
+    a {
+      font-weight: 700;
+      font-size: fluid-font(1.8rem, 1.6rem);
+      color: var(--clr-default-100);
+    }
+
+    @media (max-width: em(375)) {
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__bottom-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__bottom-item {
+    p, a {
+      line-height: 155%;
+      color: var(--clr-default-300);
+    }
+
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
   }
 }
